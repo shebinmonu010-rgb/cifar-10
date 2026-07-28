@@ -35,14 +35,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-with st.spinner("Loading... Please wait."):
-    model.fit(
-        x_train,
-        y_train,
-        epochs=4,
-        batch_size=32,
-        verbose=0
-    )
+
 
 loss, accuracy = model.evaluate(x_test, y_test, verbose=0)
 
