@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cifar10-app
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: streamlit run cifar.py --server.port=$PORT --server.address=0.0.0.0
